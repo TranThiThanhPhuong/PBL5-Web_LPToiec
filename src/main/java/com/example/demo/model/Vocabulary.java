@@ -10,7 +10,7 @@ public class Vocabulary {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @Column(name = "vocabulary_name", nullable = false, length = 255)
     private String vocabularyName;
@@ -37,11 +37,11 @@ public class Vocabulary {
         this.imageUrl = imageUrl;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

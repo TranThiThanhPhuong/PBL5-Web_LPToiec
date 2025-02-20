@@ -8,14 +8,14 @@ public class VocabularyContent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @ManyToOne
     @JoinColumn(name = "vocabulary_id", nullable = false) 
     private Vocabulary vocabulary;
 
     @Column(name = "number", nullable = false)
-    private int number;
+    private long number;
 
     @Column(name = "content", nullable = false, length = 255)
     private String content;
@@ -38,7 +38,7 @@ public class VocabularyContent {
     public VocabularyContent() {
     }
 
-    public VocabularyContent(Vocabulary vocabulary, int number, String content, String transcribe, String imageUrl, String audiomp3, String meaning, String sentence) {
+    public VocabularyContent(Vocabulary vocabulary, long number, String content, String transcribe, String imageUrl, String audiomp3, String meaning, String sentence) {
         this.vocabulary = vocabulary;
         this.number = number;
         this.content = content;
@@ -49,11 +49,11 @@ public class VocabularyContent {
         this.sentence = sentence;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -65,11 +65,11 @@ public class VocabularyContent {
         this.vocabulary = vocabulary;
     }
 
-    public int getNumber() {
+    public long getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(long number) {
         this.number = number;
     }
 

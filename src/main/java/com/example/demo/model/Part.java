@@ -8,7 +8,7 @@ import java.util.List;
 public class Part {
 
     @Id
-    private int id; 
+    private long id; 
     
     @Column(name = "part_name", nullable = false, length = 50)
     private String partName;
@@ -22,16 +22,16 @@ public class Part {
     public Part() {
     }
 
-    public Part(int id, String partName) {
+    public Part(long id, String partName) {
         this.id = id;
         this.partName = partName;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

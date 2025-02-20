@@ -8,7 +8,7 @@ public class ReadingQuestion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @ManyToOne
     @JoinColumn(name = "reading_id", nullable = false)
@@ -39,14 +39,14 @@ public class ReadingQuestion {
     private String imageUrl;
 
     @Column(name = "order_number")
-    private Integer orderNumber;
+    private long orderNumber;
 
     public ReadingQuestion() {
     }
 
     public ReadingQuestion(Reading reading, String questionText, String correctAnswer,
                            String answer1, String answer2, String answer3, String answer4,
-                           String explanation, String imageUrl, Integer orderNumber) {
+                           String explanation, String imageUrl, long orderNumber) {
         this.reading = reading;
         this.questionText = questionText;
         this.correctAnswer = correctAnswer;
@@ -59,11 +59,11 @@ public class ReadingQuestion {
         this.orderNumber = orderNumber;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -139,11 +139,11 @@ public class ReadingQuestion {
         this.imageUrl = imageUrl;
     }
 
-    public Integer getOrderNumber() {
+    public long getOrderNumber() {
         return orderNumber;
     }
 
-    public void setOrderNumber(Integer orderNumber) {
+    public void setOrderNumber(long orderNumber) {
         this.orderNumber = orderNumber;
     }
 }

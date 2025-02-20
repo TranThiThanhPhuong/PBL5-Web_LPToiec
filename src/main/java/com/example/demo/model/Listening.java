@@ -9,13 +9,13 @@ public class Listening {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @Column(name = "listening_name", nullable = false, length = 255)
     private String listeningName;
 
     @Column(name = "difficulty")
-    private Integer difficulty;
+    private long difficulty;
 
     @Column(name = "script", length = 255)
     private String script;
@@ -27,18 +27,18 @@ public class Listening {
     public Listening() {
     }
 
-    public Listening(String listeningName, Integer difficulty, String script) {
+    public Listening(String listeningName, long difficulty, String script) {
         this.listeningName = listeningName;
         this.difficulty = difficulty;
         this.script = script;
     }
 
     // Getters and Setters
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -50,11 +50,11 @@ public class Listening {
         this.listeningName = listeningName;
     }
 
-    public Integer getDifficulty() {
+    public long getDifficulty() {
         return difficulty;
     }
 
-    public void setDifficulty(Integer difficulty) {
+    public void setDifficulty(long difficulty) {
         this.difficulty = difficulty;
     }
 

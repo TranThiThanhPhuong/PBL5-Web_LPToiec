@@ -8,7 +8,7 @@ public class ListeningQuestion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @ManyToOne
     @JoinColumn(name = "listening_id", nullable = false)
@@ -39,7 +39,7 @@ public class ListeningQuestion {
     private String imageUrl;
 
     @Column(name = "order_number")
-    private int orderNumber;
+    private long orderNumber;
 
     // Constructors
     public ListeningQuestion() {
@@ -47,7 +47,7 @@ public class ListeningQuestion {
 
     public ListeningQuestion(Listening listening, String questionText, String correctAnswer, String answer1,
                              String answer2, String answer3, String answer4, String explanation,
-                             String imageUrl, int orderNumber) {
+                             String imageUrl, long orderNumber) {
         this.listening = listening;
         this.questionText = questionText;
         this.correctAnswer = correctAnswer;
@@ -60,12 +60,11 @@ public class ListeningQuestion {
         this.orderNumber = orderNumber;
     }
 
-    // Getters and Setters
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -141,11 +140,11 @@ public class ListeningQuestion {
         this.imageUrl = imageUrl;
     }
 
-    public int getOrderNumber() {
+    public long getOrderNumber() {
         return orderNumber;
     }
 
-    public void setOrderNumber(int orderNumber) {
+    public void setOrderNumber(long orderNumber) {
         this.orderNumber = orderNumber;
     }
 }

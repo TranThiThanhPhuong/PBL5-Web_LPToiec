@@ -9,7 +9,7 @@ public class Reading {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @ManyToOne
     @JoinColumn(name = "part_id", nullable = false)
@@ -19,7 +19,7 @@ public class Reading {
     private String readingName;
 
     @Column(name = "difficulty")
-    private Integer difficulty;
+    private long difficulty;
 
     @Column(name = "script", length = 255)
     private String script;
@@ -30,18 +30,18 @@ public class Reading {
     public Reading() {
     }
 
-    public Reading(Part part, String readingName, Integer difficulty, String script) {
+    public Reading(Part part, String readingName, long difficulty, String script) {
         this.part = part;
         this.readingName = readingName;
         this.difficulty = difficulty;
         this.script = script;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -61,11 +61,11 @@ public class Reading {
         this.readingName = readingName;
     }
 
-    public Integer getDifficulty() {
+    public long getDifficulty() {
         return difficulty;
     }
 
-    public void setDifficulty(Integer difficulty) {
+    public void setDifficulty(long difficulty) {
         this.difficulty = difficulty;
     }
 
