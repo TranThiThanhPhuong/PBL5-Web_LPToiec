@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "listening")
@@ -9,10 +10,6 @@ public class Listening {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @ManyToOne
-    @JoinColumn(name = "part_id", nullable = false)
-    private Part part;
 
     @Column(name = "listening_name", nullable = false, length = 255)
     private String listeningName;
@@ -23,30 +20,26 @@ public class Listening {
     @Column(name = "script", length = 255)
     private String script;
 
+    @OneToMany(mappedBy = "listening", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ListeningQuestion> listeningQuestions;
+
+    // Constructors
     public Listening() {
     }
 
-    public Listening(Part part, String listeningName, Integer difficulty, String script) {
-        this.part = part;
+    public Listening(String listeningName, Integer difficulty, String script) {
         this.listeningName = listeningName;
         this.difficulty = difficulty;
         this.script = script;
     }
 
+    // Getters and Setters
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Part getPart() {
-        return part;
-    }
-
-    public void setPart(Part part) {
-        this.part = part;
     }
 
     public String getListeningName() {
@@ -71,5 +64,13 @@ public class Listening {
 
     public void setScript(String script) {
         this.script = script;
+    }
+
+    public List<ListeningQuestion> getListeningQuestions() {
+        return listeningQuestions;
+    }
+
+    public void setListeningQuestions(List<ListeningQuestion> listeningQuestions) {
+        this.listeningQuestions = listeningQuestions;
     }
 }

@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "reading")
@@ -22,6 +23,9 @@ public class Reading {
 
     @Column(name = "script", length = 255)
     private String script;
+
+    @OneToMany(mappedBy = "reading", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ReadingQuestion> readingQuestions;
 
     public Reading() {
     }
@@ -71,5 +75,13 @@ public class Reading {
 
     public void setScript(String script) {
         this.script = script;
+    }
+
+    public List<ReadingQuestion> getReadingQuestions() {
+        return readingQuestions;
+    }
+
+    public void setReadingQuestions(List<ReadingQuestion> readingQuestions) {
+        this.readingQuestions = readingQuestions;
     }
 }
