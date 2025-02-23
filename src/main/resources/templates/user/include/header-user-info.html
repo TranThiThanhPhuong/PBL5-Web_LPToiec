@@ -6,10 +6,10 @@
         <li><a href="#">Tự học <i class="fas fa-caret-down"></i></a>
             <div class="dropdown-menu">
                 <ul>
-                <li><a href="#">Từ vựng</a></li>
-                <li><a href="#">Ngữ pháp</a></li>
-                <li><a href="#">Listening</a></li>
-                <li><a href="#">Reading</a></li>
+                	<li><a href="#">Từ vựng</a></li>
+                	<li><a href="#">Ngữ pháp</a></li>
+                	<li><a href="#">Listening</a></li>
+                	<li><a href="#">Reading</a></li>
                 </ul>
             </div>
         </li>
@@ -18,8 +18,18 @@
     </ul>
   </div>
 
-  <div class="user-info">
-      <img th:src="@{/asset/image/user/avatar.jpg}" alt="Banner">
-      <a href=""><span>Username</span></a>
-  </div>
+	<div class="user-info">
+        <ul>
+          <li><img th:src="@{/asset/image/user/avatar.jpg}" alt="Banner"></li>
+          <li>
+            <a href="">Username</a>
+            <div class="dropdown-user">
+              <ul>
+                <li><a href="#">Thông tin tài khoản</a></li>
+                <li><a href="#">Đăng xuất</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>  
 </header>
