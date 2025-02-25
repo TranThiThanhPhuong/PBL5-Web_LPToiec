@@ -129,62 +129,63 @@ body {
     background-color: var(--color-white);
 }
 
-/* USER-INFO */
-.menu-bar .user-info {
+/* USER-MENU */
+.menu-bar .user-menu {
     display: inline-block;
 }
 
-.menu-bar .user-info ul {
+.menu-bar .user-menu ul {
     display: flex;
     align-items: center;
 }
 
-.menu-bar .user-info ul li {
+.menu-bar .user-menu ul li {
     padding: 8px;
     position: relative;
 }
 
-.menu-bar .user-info img {
+.menu-bar .user-menu img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
 }
 
-.menu-bar .user-info a {
+.menu-bar .user-menu a {
     font-size: 16px;
     color: var(--color-white);
     text-decoration: none;
     transition: all 0.3s;
 }
 
-.menu-bar .user-info a:hover {
+.menu-bar .user-menu a:hover {
     color: var(--color-text);
 }
 
 
 /* DROPDOWN-USER */
+
 .dropdown-user {
     display: none;
     border-radius: 5px;
 }
 
-.menu-bar .user-info ul li:hover .dropdown-user {
+.menu-bar .user-menu ul li:hover .dropdown-user {
     display: block;
     position: absolute;
     background-color: var(--color-bgmain);
 }
 
-.menu-bar .user-info ul li:hover .dropdown-user ul {
+.menu-bar .user-menu ul li:hover .dropdown-user ul {
     display: block;
     padding: 7px;
 }
 
-.menu-bar .user-info ul li:hover .dropdown-user ul li {
+.menu-bar .user-menu ul li:hover .dropdown-user ul li {
     width: 190px;
     padding: 7px;
 }
 
-/* Home Page */
+/* ====== HOME PAFE ====== */
 
 .max-width {
     height: calc(100vh - 70px);
@@ -220,7 +221,7 @@ body {
     color: #ffc441;
     border: 3px solid #602e9e;
     border-radius: 9px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 3rem 0;
     padding: 10px;
     cursor: pointer;

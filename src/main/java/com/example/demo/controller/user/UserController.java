@@ -4,15 +4,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/user/include")
+@RequestMapping("/user")
 public class UserController {
-	@RequestMapping("")
+
+    @RequestMapping("/index")
     public String user() {
-        return "user/include/header-user";
+        return "user/index";
     }
-	
-	@RequestMapping("/info")
-	public String userInfo() {
-		return "user/include/header-user-info";
-	}
+
+    @RequestMapping("/profile")
+    public String userProfile() {
+        return "user/profile-user";
+    }
 }
