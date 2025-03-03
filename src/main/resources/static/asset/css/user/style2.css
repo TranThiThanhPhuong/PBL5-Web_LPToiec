@@ -31,6 +31,7 @@ ul, li {
     padding: 20px 60px 0 60px;
     height: calc(100vh - 70px);
     border-radius: 3px;
+    overflow: hidden;
 }
 
 .user-profile section {
