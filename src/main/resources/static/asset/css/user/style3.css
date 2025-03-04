@@ -564,3 +564,16 @@ ul, li {
 .question.part567 {
 	padding: 0;
 }
+
+.ques-text {
+	margin-bottom: -20px;
+}
+
+.ques-text p {
+	font-size: 16px;
+	text-align: justify;
+	padding-top: 15px;
+}
+
+
+.ques-text 
